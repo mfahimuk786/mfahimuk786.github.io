@@ -1,1 +1,180 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOHAMMAD FAHIM SHAIKH - Overseas Employment Connector</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f4f6f8;color:#111}
+header{background:#0b2a4a;color:#fff;padding:14px;text-align:center}
+header h1{font-size:26px;letter-spacing:1px}
+header p{font-size:13px;margin-top:4px}
+nav{background:#fff;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:10px;border-bottom:1px solid #ddd}
+nav a{color:#0b2a4a;text-decoration:none;font-weight:bold;font-size:14px}
+.lang{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:10px;background:#eaf2ff}
+.lang button{padding:7px 12px;border:1px solid #0b2a4a;background:#fff;cursor:pointer;border-radius:20px}
+.hero{background:#0b2a4a;color:#fff;padding:30px 16px;text-align:center}
+.hero h2{font-size:30px}
+.hero p{margin:12px auto;max-width:700px;line-height:1.6}
+.btn{display:inline-block;padding:11px 16px;margin:5px;border-radius:6px;text-decoration:none;font-weight:bold}
+.wa{background:#25D366;color:#fff}
+.call{background:#fff;color:#0b2a4a}
+.mail{background:#ffb400;color:#111}
+.box{background:#fff;margin:14px auto;padding:18px;max-width:900px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.box h3{color:#0b2a4a;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.card{background:#f7f9ff;padding:12px;border-radius:8px}
+input,select,textarea{width:100%;padding:11px;margin:6px 0;border:1px solid #ccc;border-radius:6px}
+button.submit{background:#0b2a4a;color:#fff;padding:12px;border:0;border-radius:6px;width:100%;font-weight:bold;cursor:pointer}
+.ai{border:2px solid #0082fb}
+.ai-msg{background:#eef6ff;padding:10px;border-radius:8px;margin-bottom:8px}
+footer{background:#0b2a4a;color:#fff;text-align:center;padding:18px;font-size:14px;line-height:1.7}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>MOHAMMAD FAHIM SHAIKH</h1>
+<p>FROM PAKISTAN TO THE WORLD | LICENSED • TRUSTED • GLOBAL</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#countries">Countries</a>
+<a href="#apply">Apply Now</a>
+<a href="#demand">Company Demand</a>
+<a href="#terms">Terms</a>
+<a href="#privacy">Privacy</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="lang">
+<button onclick="setLang('en')">🇬🇧 English (UK)</button>
+<button onclick="setLang('ar')">🇸🇦 Arabic</button>
+<button onclick="setLang('ru')">🇷🇺 Russian</button>
+<button onclick="setLang('ur')">🇵🇰 Urdu</button>
+<button onclick="setLang('fr')">🇫🇷 French</button>
+<button onclick="setLang('mt')">🇲🇹 Maltese</button>
+<button onclick="setLang('az')">🇦🇿 Azerbaijani</button>
+</div>
+
+<div style="text-align:center;background:#fff;padding:8px">
+<div id="google_translate_element"></div>
+<p style="font-size:12px">Google Translate - Any language, write in your own language</p>
+</div>
+
+<section class="hero" id="home">
+<h2 id="heroTitle">Overseas Employment Connector</h2>
+<p id="heroText">Connecting Pakistan Workforce to Gulf & Europe. Licensed recruitment partner helping skilled and professional Pakistani talent secure verified overseas jobs. End-to-end support - documentation, visas, placement, onboarding.</p>
+<a class="btn wa" href="https://wa.me/923153673539">CHAT ON WHATSAPP</a>
+<a class="btn call" href="tel:+923153673539">CALL NOW</a>
+<a class="btn mail" href="mailto:contact@mohammadfahimshaikh.com">EMAIL US</a>
+</section>
+
+<div class="box ai">
+<h3>Meta AI Online | Ready to assist</h3>
+<div class="ai-msg" id="aiMsg">Hi! I can help you apply or list a company demand. Ask me about jobs, documents, or process.</div>
+<input id="aiInput" placeholder="Ask about jobs, visas, requirements...">
+<button class="submit" onclick="askAI()">SEND TO META AI</button>
+</div>
+
+<div class="box" id="apply">
+<h3>Apply Now - Job seekers</h3>
+<input placeholder="Full Name">
+<input placeholder="Phone / WhatsApp">
+<select><option>Country of Interest</option><option>Saudi Arabia</option><option>UAE</option><option>Qatar</option><option>Oman</option><option>Azerbaijan</option><option>Russia</option><option>Malta</option></select>
+<input placeholder="Profession / Skill">
+<input placeholder="Experience">
+<input placeholder="Paste CV Link / Drive Link">
+<button class="submit" onclick="alert('Application received. We will contact you on WhatsApp.')">SUBMIT APPLICATION</button>
+<p>Partner Countries: Saudi Arabia - UAE - Qatar - Azerbaijan - Russia - Malta</p>
+</div>
+
+<div class="box" id="demand">
+<h3>Company Demand - Employers</h3>
+<input placeholder="Company Name">
+<input placeholder="Company Location / Country">
+<input placeholder="Company Email">
+<input placeholder="Company WhatsApp Number">
+<input placeholder="Required Roles - e.g. 20 Welders, 10 Drivers">
+<textarea placeholder="Requirements - Salary, Duty, Accommodation"></textarea>
+<button class="submit" onclick="alert('Demand received. We will contact your company.')">SUBMIT DEMAND</button>
+</div>
+
+<div class="box">
+<div class="grid">
+<div class="card"><b>LICENSED & VERIFIED</b><p>Government approved recruitment license.</p></div>
+<div class="card"><b>TRUSTED PARTNER</b><p>1000+ candidates placed across Gulf & Europe.</p></div>
+<div class="card"><b>GLOBAL SUPPORT</b><p>From shortlisting to visa & travel assistance.</p></div>
+</div>
+</div>
+
+<div class="box" id="about">
+<h3>About Us</h3>
+<p>MOHAMMAD FAHIM SHAIKH - Pakistan se Gulf aur Europe ke liye licensed connector. 1000+ candidates placed. Verified jobs, no fraud, no fake visa.</p>
+<p>We work with Building Construction Companies, Shopping Malls, Hotels, Factories, Hospitals in Gulf, Europe, Russia, Azerbaijan, Malta.</p>
+</div>
+
+<div class="box" id="services">
+<h3>Our Services</h3>
+<p>1. Job Placement<br>2. Visa Processing<br>3. Documentation<br>4. Company Demand<br>5. Airport to Onboarding Support</p>
+</div>
+
+<div class="box" id="countries">
+<h3>Countries</h3>
+<p>Saudi Arabia, UAE, Qatar, Oman, Azerbaijan, Russia, Malta</p>
+<p>Workers, Drivers, Electricians, Plumbers, Welders, Nurses, Hotel Staff ki demand hai.</p>
+</div>
+
+<div class="box" id="terms">
+<h3>Terms & Conditions</h3>
+<p>1. All jobs are verified. No fake visa, no fraud.<br>2. Candidate must provide real documents.<br>3. Visa process time depends on embassy & company.<br>4. Company demand will be verified before publishing.<br>5. Payment only after written agreement.</p>
+</div>
+
+<div class="box" id="privacy">
+<h3>Privacy Policy</h3>
+<p>Your name, number, email and CV are only used for job & demand process. We never share your data with third party without permission. You can ask to delete your data anytime on WhatsApp / Email.</p>
+</div>
+
+<div class="box" id="contact">
+<h3>Contact Us</h3>
+<p>Phone / WhatsApp: +92 315 3673539<br>Email: contact@mohammadfahimshaikh.com<br>Address: Karachi, Pakistan<br>Timing: 9 AM - 9 PM, 7 Days</p>
+</div>
+
+<footer>
+© 2026 MOHAMMAD FAHIM SHAIKH - Overseas Employment Connector<br>
+International - Not Local - British Style Clean Website<br>
+Karachi, Pakistan | +92 315 3673539
+</footer>
+
+<script>
+function setLang(l){
+var t={
+en:["Overseas Employment Connector","Connecting Pakistan Workforce to Gulf & Europe. Licensed recruitment partner helping skilled and professional Pakistani talent secure verified overseas jobs."],
+ar:["موصل التوظيف في الخارج","ربط القوى العاملة الباكستانية بالخليج وأوروبا. شريك توظيف مرخص."],
+ru:["Международный рекрутер","Соединяем рабочих из Пакистана со странами Персидского залива и Европой."],
+ur:["اوورسیز ایمپلائمنٹ کنیکٹر","پاکستانی ورک فورس کو گلف اور یورپ سے جوڑنا۔ لائسنس یافتہ پارٹنر۔"],
+fr:["Connecteur d'Emploi à l'Étranger","Connexion de la main-d'oeuvre pakistanaise au Golfe et à l'Europe."],
+mt:["Konnettur tal-Impjiegi Barranin","Ngħaqqdu l-ħaddiema Pakistani mal-Golf u l-Ewropa."],
+az:["Xaricdə Məşğulluq Bağlayıcısı","Pakistan işçi qüvvəsini Körfəz və Avropa ilə birləşdirir."]
+};
+document.getElementById('heroTitle').innerText=t[l][0];
+document.getElementById('heroText').innerText=t[l][1];
+}
+function askAI(){
+var v=document.getElementById('aiInput').value;
+if(!v) return;
+document.getElementById('aiMsg').innerText="Meta AI: Thanks for your message - '"+v+"'. For jobs, send your Name, Profession, Country on WhatsApp +92 315 3673539. For Company Demand, send Company Name, Roles, Location. We reply within 1 hour, 9 AM - 9 PM.";
+}
+function googleTranslateElementInit(){
+new google.translate.TranslateElement({pageLanguage:'en'},'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
