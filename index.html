@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOHAMMAD FAHIM SHAIKH - Overseas Employment Connector</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f2f2f2}
+header{background:#0a1e4e;color:#fff;padding:12px}
+.top{display:flex;justify-content:space-between;align-items:center;max-width:1150px;margin:auto}
+.logo{display:flex;gap:10px;align-items:center}
+.logo-icon{font-size:38px;border:2px solid #fff;padding:5px;border-radius:10px}
+.logo b{font-size:20px;line-height:1.1}
+.logo span{font-size:10px;color:#e8b84b}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-size:14px}
+.lang{text-align:right}
+.lang-btn{background:#102a5e;color:#fff;border:1px solid #fff;padding:6px 10px;border-radius:5px}
+.lang-flags{display:flex;gap:12px;margin-top:6px}
+.lang-flags button{background:none;border:none;cursor:pointer}
+.lang-flags span{font-size:22px;display:block}
+.hero{background:#0a1e4e;color:#fff;padding:35px 15px}
+.hero-in{max-width:1150px;margin:auto;display:flex;gap:20px;align-items:center}
+.hero-left{flex:1.2}
+.hero-left h1{font-size:44px;line-height:1.1}
+.hero-left h2{color:#e8b84b;font-size:24px;margin:10px 0}
+.hero-left p{font-size:15px;line-height:1.6}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+.btn{padding:13px 16px;border-radius:8px;text-decoration:none;font-weight:bold}
+.green{background:#22a35c;color:#fff}
+.white{background:#fff;color:#111}
+.goldb{background:#fff;color:#111;border:2px solid #e8b84b}
+.ai{background:#fff;color:#111;border-radius:12px;padding:15px;flex:1}
+.ai-head{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.ai-msg{background:#f2f2f2;padding:12px;border-radius:8px;font-size:14px}
+.ai-input{display:flex;gap:8px;margin-top:10px}
+.ai-input input{flex:1;padding:11px;border:1px solid #ddd;border-radius:8px}
+.ai-input button{background:#1e90ff;color:#fff;border:none;padding:11px 14px;border-radius:8px}
+.wrap{max-width:1150px;margin:auto;padding:15px}
+.card{background:#fff;border-radius:12px;padding:20px;margin:10px 0}
+.card h3{font-size:26px;color:#0a1e4e}
+.card p{font-size:13px;color:#666;margin:8px 0}
+input,select{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:8px}
+label{font-size:12px;font-weight:bold}
+.submit{background:#0a1e4e;color:#e8b84b;border:none;padding:13px;border-radius:8px;font-weight:bold;cursor:pointer}
+.submit2{background:#e8b84b;color:#111;border:none;padding:13px;border-radius:8px;font-weight:bold;cursor:pointer}
+.flags{font-size:26px;line-height:1.6}
+.flags small{font-size:12px;color:#333}
+.tag{border:1px solid #eee;padding:12px;border-radius:10px;margin:6px 0}
+.three{display:flex;gap:10px;margin-top:10px}
+.three div{flex:1}
+footer{background:#0a1e4e;color:#fff;padding:20px;text-align:center}
+footer div{max-width:1150px;margin:auto}
+.rtl{direction:rtl;text-align:right}
+@media(max-width:800px){.hero-in,.wrap{flex-direction:column}.three{flex-direction:column}}
+</style>
+</head>
+<body id="body">
+<header><div class="top">
+<div class="logo"><div class="logo-icon">🌍</div><div><b>MOHAMMAD FAHIM<br>SHAIKH</b><br><span>OVERSEAS EMPLOYMENT CONNECTOR</span></div></div>
+<div><nav><a href="#home">Home</a><a href="#apply">Apply</a><a href="#demand">Demand</a><a href="#contact">Contact</a></nav>
+<div class="lang"><button class="lang-btn">🌐 Language</button>
+<div class="lang-flags"><button onclick="setLang('en')"><span>🇬🇧</span><small>EN</small></button><button onclick="setLang('ur')"><span>🇵🇰</span><small>UR</small></button><button onclick="setLang('ar')"><span>🇸🇦</span><small>AR</small></button><button onclick="setLang('ru')"><span>🇷🇺</span><small>RU</small></button></div></div></div>
+</div></header>
+<div class="hero" id="home"><div class="hero-in">
+<div class="hero-left"><h1 data-i18n="heroTitle">Overseas Employment Connector</h1>
+<h2 data-i18n="heroSub">Connecting Pakistan to the World</h2>
+<p data-i18n="heroDesc">Licensed recruitment service for Gulf, Europe and more. Apply online in 2 minutes.</p>
+<div class="btns"><a class="btn green" href="#apply">Apply Now</a><a class="btn white" href="#demand">Company Demand</a></div></div>
+<div class="ai"><div class="ai-head"><b>🤖 AI Assistant</b><small>Ask anything</small></div><div class="ai-msg" id="aiMsg">Hello! I can help you apply for jobs abroad. Type your question below.</div><div class="ai-input"><input id="aiQ" placeholder="e.g. Dubai driver job?"><button onclick="askAI()">Send</button></div></div>
+<div class="wrap" id="apply"><div class="card"><h3 data-i18n="applyTitle">Apply For Job</h3><p>Fill this form, we will contact you on WhatsApp.</p>
+<div class="card" id="demand"><h3 data-i18n="demandTitle">Company Demand / Manpower Request</h3><p>Companies can send their manpower demand here.</p>
+<div class="wrap" style="padding-top:0"><div class="card"><label>Full Name</label><input id="aName" placeholder="Mohammad Fahim"><label>WhatsApp Number</label><input id="aPhone" placeholder="03XX-XXXXXXX"><label>Country You Want</label><select id="aCountry"><option>Saudi Arabia</option><option>UAE - Dubai</option><option>Qatar</option><option>Oman</option><option>Europe</option></select><label>Work / Trade</label><input id="aWork" placeholder="Driver, Mason, Electrician..."><button class="submit" onclick="sendApply()">Send Application on WhatsApp</button></div></div>
+<div class="wrap" style="padding-top:0"><div class="card"><label>Company Name</label><input id="cName" placeholder="Company Name"><label>Workers Needed</label><input id="cNeed" placeholder="e.g. 50 Mason"><label>Country</label><input id="cCountry" placeholder="Saudi Arabia"><button class="submit2" onclick="sendDemand()">Send Demand on WhatsApp</button></div><div class="flags">🇸🇦 🇦🇪 🇶🇦 🇴🇲 🇪🇺 <br><small>Saudi | UAE | Qatar | Oman | Europe</small></div><div class="three"><div class="tag"><b>✅ Fast Process</b><p>Visa + Ticket Support</p></div><div class="tag"><b>✅ Trusted</b><p>1000+ Workers Sent</p></div><div class="tag"><b>✅ Support</b><p>Urdu / English / Arabic</p></div></div></div></div></div>
+<footer><div><span>© 2024 MOHAMMAD FAHIM SHAIKH - Overseas Employment Connector | WhatsApp: 0300-XXXXXXX</span></div></footer>
+<script>
+const T={
+en:{heroTitle:"Overseas Employment Connector",heroSub:"Connecting Pakistan to the World",heroDesc:"Licensed recruitment service for Gulf, Europe and more.",applyTitle:"Apply For Job",demandTitle:"Company Demand / Manpower Request"},
+ur:{heroTitle:"اوورسیز ایمپلائمنٹ کنیکٹر",heroSub:"پاکستان کو دنیا سے جوڑنا",heroDesc:"خلیج اور یورپ کے لیے لائسنس یافتہ بھرتی سروس۔",applyTitle:"نوکری کے لیے اپلائی کریں",demandTitle:"کمپنی ڈیمانڈ / افرادی قوت کی درخواست"},
+ar:{heroTitle:"موصل التوظيف الخارجي",heroSub:"ربط باكستان بالعالم",heroDesc:"خدمة توظيف مرخصة للخليج وأوروبا.",applyTitle:"التقدم للوظيفة",demandTitle:"طلب الشركة / طلب العمالة"},
+ru:{heroTitle:"Коннектор зарубежного трудоустройства",heroSub:"Соединяем Пакистан с миром",heroDesc:"Лицензированная служба подбора для Залива и Европы.",applyTitle:"Подать заявку",demandTitle:"Запрос компании / Заявка на персонал"}
+};
+function setLang(l){document.querySelectorAll("[data-i18n]").forEach(e=>{let k=e.getAttribute("data-i18n");if(T[l][k])e.innerText=T[l][k]});document.getElementById("body").className=(l=="ur"||l=="ar")?"rtl":"";}
+function askAI(){let v=document.getElementById("aiQ").value;document.getElementById("aiMsg").innerText="Thanks! For '"+v+"' please apply below, our team will call you on WhatsApp.";}
+function sendApply(){let msg="NEW APPLY%0AName: "+document.getElementById("aName").value+"%0APhone: "+document.getElementById("aPhone").value+"%0ACountry: "+document.getElementById("aCountry").value+"%0AWork: "+document.getElementById("aWork").value;window.open("https://wa.me/923000000000?text="+msg);}
+function sendDemand(){let msg="NEW COMPANY DEMAND%0ACompany: "+document.getElementById("cName").value+"%0ANeed: "+document.getElementById("cNeed").value+"%0ACountry: "+document.getElementById("cCountry").value;window.open("https://wa.me/923000000000?text="+msg);}
+</script>
+</body>
+</html>
